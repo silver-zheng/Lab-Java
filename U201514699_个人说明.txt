@@ -1,0 +1,3 @@
+使用MySQL数据库，且都用其图形界面workbench进行操作。
+账号：root
+密码：ydnydn910ZX

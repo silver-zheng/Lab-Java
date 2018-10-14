@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane fx:id="split_reg" dividerPositions="0.15829145728643215" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospital.HandlerReg">
+  <items>
+    <AnchorPane fx:id="anchorpane_up" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Label fx:id="label_title" layoutX="237.0" layoutY="16.0" prefHeight="28.0" prefWidth="124.0" text="门 诊 挂 号" textFill="#5c0a41">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+    <AnchorPane fx:id="anchorpane_down" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Button fx:id="btn_ok" layoutX="64.0" layoutY="249.0" mnemonicParsing="false" onAction="#on_btn_ok_clicked" text="确定">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="label_doc" layoutX="322.0" layoutY="36.0" text="医生姓名">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_regtype" layoutX="64.0" layoutY="81.0" text="号种类别">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="text_regtype" editable="false" layoutX="128.0" layoutY="78.0" onMouseClicked="#on_text_regtype_clicked">
+               <contextMenu>
+                  <ContextMenu fx:id="context_regtype">
+                    <items>
+                        <SeparatorMenuItem mnemonicParsing="false">
+                           <content>
+                              <ListView fx:id="list_regtype" prefHeight="200.0" prefWidth="200.0" />
+                           </content>
+                        </SeparatorMenuItem>
+                    </items>
+                  </ContextMenu>
+               </contextMenu></TextField>
+            <Label fx:id="label_regname" layoutX="321.0" layoutY="81.0" text="号种名称">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="text_regname" editable="false" layoutX="385.0" layoutY="77.0" onMouseClicked="#on_text_regname_clicked">
+               <contextMenu>
+                  <ContextMenu fx:id="context_regname">
+                    <items>
+                        <SeparatorMenuItem mnemonicParsing="false">
+                           <content>
+                              <ListView fx:id="list_regname" prefHeight="200.0" prefWidth="200.0" />
+                           </content>
+                        </SeparatorMenuItem>
+                    </items>
+                  </ContextMenu>
+               </contextMenu></TextField>
+            <Label fx:id="label_cost" layoutX="322.0" layoutY="128.0" text="交款金额">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="text_pay" layoutX="386.0" layoutY="124.0" onMouseClicked="#on_text_pay_clicked" />
+            <Label fx:id="label_pay" layoutX="64.0" layoutY="128.0" text="应缴金额">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="text_cost" editable="false" layoutX="129.0" layoutY="124.0" onMouseClicked="#on_text_cost_clicked" />
+            <TextField fx:id="text_charge" editable="false" layoutX="129.0" layoutY="165.0" onMouseClicked="#on_text_charge_clicked" />
+            <Label fx:id="label_charge" layoutX="64.0" layoutY="169.0" text="找零金额">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_regnum" layoutX="321.0" layoutY="169.0" text="挂号号码">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="text_regnum" editable="false" layoutX="386.0" layoutY="165.0" onMouseClicked="#on_text_regnum_clicked" />
+            <Label fx:id="label_office" layoutX="66.0" layoutY="36.0" text="科室名称">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="text_doc" editable="false" layoutX="385.0" layoutY="33.0" onMouseClicked="#on_text_doc_clicked">
+               <contextMenu>
+                  <ContextMenu fx:id="context_doc">
+                    <items>
+                        <SeparatorMenuItem mnemonicParsing="false">
+                           <content>
+                              <ListView fx:id="list_doc" prefHeight="200.0" prefWidth="200.0" />
+                           </content>
+                        </SeparatorMenuItem>
+                    </items>
+                  </ContextMenu>
+               </contextMenu></TextField>
+            <Button fx:id="btn_clear" layoutX="210.0" layoutY="249.0" mnemonicParsing="false" onAction="#on_btn_clear_clicked" text="清除">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_exit" layoutX="497.0" layoutY="249.0" mnemonicParsing="false" onAction="#on_btn_exit_clicked" text="退出">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_logout" layoutX="361.0" layoutY="249.0" mnemonicParsing="false" onAction="#on_btn_logout_clicked" text="注销">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="text_office" layoutX="128.0" layoutY="33.0" onMouseClicked="#on_text_office_clicked">
+               <contextMenu>
+                  <ContextMenu fx:id="context_office">
+                    <items>
+                        <SeparatorMenuItem fx:id="separator_office" mnemonicParsing="false">
+                           <content>
+                              <ListView fx:id="list_office" onMouseClicked="#on_listoffice_clicked" prefHeight="200.0" prefWidth="200.0" />
+                           </content>
+                        </SeparatorMenuItem>
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </TextField>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

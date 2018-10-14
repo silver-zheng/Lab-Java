@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane fx:id="split_reg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#on_mouse_entered" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospital.HandlerDoc">
+  <items>
+    <AnchorPane fx:id="anchorpane_down" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Button fx:id="btn_exit" layoutX="375.0" layoutY="361.0" mnemonicParsing="false" onAction="#on_btn_exit_clicked" prefHeight="30.0" prefWidth="124.0" text="退出">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_logout" layoutX="81.0" layoutY="361.0" mnemonicParsing="false" onAction="#on_btn_logout_clicked" prefHeight="30.0" prefWidth="124.0" text="注销">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <TabPane layoutX="1.0" layoutY="-2.0" prefHeight="365.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="病人列表">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="table_reg" prefHeight="330.0" prefWidth="598.0">
+                                 <columns>
+                                    <TableColumn fx:id="col_regnum" prefWidth="100.0" text="挂号编号" />
+                                    <TableColumn fx:id="col_patname" editable="false" prefWidth="109.0" text="病人名称" />
+                                    <TableColumn fx:id="col_regtime" prefWidth="219.0" text="挂号时间" />
+                                    <TableColumn fx:id="col_regtype" prefWidth="101.0" text="号种类别" />
+                                    <TableColumn fx:id="col_valid" prefWidth="68.0" text="是否有效" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="收入列表">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="table_income" layoutY="28.0" prefHeight="300.0" prefWidth="598.0">
+                                 <columns>
+                                    <TableColumn fx:id="col_officename" prefWidth="114.0" text="科室名称" />
+                                    <TableColumn fx:id="col_docnum" editable="false" prefWidth="104.0" text="医生编号" />
+                                    <TableColumn fx:id="col_docname" prefWidth="113.0" text="医生名称" />
+                                    <TableColumn fx:id="col_regtype2" prefWidth="96.0" text="号种类别" />
+                                    <TableColumn fx:id="col_regcount" prefWidth="78.0" text="挂号人次" />
+                                    <TableColumn fx:id="col_income" prefWidth="92.0" text="收入合计" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="8.0" layoutY="7.0" prefHeight="15.0" prefWidth="57.0" text="起始时间" />
+                              <Label layoutX="300.0" layoutY="7.0" prefHeight="15.0" prefWidth="57.0" text="截止时间" />
+                              <DatePicker fx:id="date_begin" layoutX="67.0" layoutY="3.0" prefHeight="23.0" prefWidth="202.0" />
+                              <DatePicker fx:id="date_end" layoutX="357.0" layoutY="3.0" prefHeight="23.0" prefWidth="202.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
